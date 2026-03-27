@@ -21,20 +21,19 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong shadow-steel py-2" : "bg-transparent py-4"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong shadow-steel py-2" : "bg-transparent py-4"}`}>
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logoDark} alt="Danush Trade" className="h-10 w-auto object-contain" />
-          <span className="font-heading text-xl font-bold text-foreground">Danush Trade</span>
+          <img src={logoDark} alt="Danush Trade" className="h-14 w-auto object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-secondary-foreground hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} className="text-sm font-medium text-secondary-foreground hover:text-steel-light transition-colors">
               {l.label}
             </a>
           ))}
-          <a href="tel:+918669251123" className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:brightness-110 transition">
+          <a href="tel:+918669251123" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold">
             <Phone className="w-4 h-4" /> Call Now
           </a>
         </div>
@@ -47,11 +46,11 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden glass-strong mt-2 mx-4 rounded-lg p-4 space-y-3">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-secondary-foreground hover:text-primary transition-colors font-medium">
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-secondary-foreground hover:text-steel-light transition-colors font-medium">
               {l.label}
             </a>
           ))}
-          <a href="tel:+918669251123" className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold justify-center">
+          <a href="tel:+918669251123" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold justify-center">
             <Phone className="w-4 h-4" /> Call Now
           </a>
         </div>

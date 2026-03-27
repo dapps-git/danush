@@ -17,7 +17,7 @@ const CtaBanner = () => {
         </p>
         <a
           href="#contact"
-          className="inline-flex items-center bg-primary text-primary-foreground px-10 py-4 rounded-lg font-heading font-semibold text-lg hover:brightness-110 transition-all shadow-steel"
+          className="inline-flex items-center btn-premium text-primary-foreground px-10 py-4 rounded-lg font-heading font-semibold text-lg shadow-steel"
         >
           Contact Us
         </a>

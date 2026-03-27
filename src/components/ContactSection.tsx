@@ -5,8 +5,9 @@ const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4" ref={ref}>
+    <section id="contact" className="py-20 bg-secondary/30 relative">
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Get In <span className="text-gradient-primary">Touch</span>
         </h2>
@@ -15,23 +16,22 @@ const ContactSection = () => {
         </p>
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-          {/* Contact Info */}
           <div className="space-y-6">
             <div className="glass rounded-xl p-6 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <Phone className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
+                <Phone className="w-6 h-6 text-steel-light" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Phone</h3>
-                <a href="tel:+918669251123" className="text-steel-light hover:text-primary transition-colors text-lg font-semibold">
+                <a href="tel:+918669251123" className="text-steel-light hover:text-foreground transition-colors text-lg font-semibold">
                   +91 866 925 1123
                 </a>
               </div>
             </div>
 
             <div className="glass rounded-xl p-6 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
+                <Mail className="w-6 h-6 text-steel-light" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Email</h3>
@@ -40,8 +40,8 @@ const ContactSection = () => {
             </div>
 
             <div className="glass rounded-xl p-6 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-steel-light" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Address</h3>
@@ -54,7 +54,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Map */}
           <div className="glass rounded-xl overflow-hidden h-[400px]">
             <iframe
               title="Danush Trade Location"

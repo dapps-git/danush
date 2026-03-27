@@ -11,8 +11,9 @@ const WhyChooseUs = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="why-us" className="py-20">
-      <div className="container mx-auto px-4" ref={ref}>
+    <section id="why-us" className="py-20 relative">
+      <div className="absolute inset-0 bg-mesh-gradient" />
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Why Choose <span className="text-gradient-primary">Danush Trade</span>
         </h2>
@@ -27,8 +28,8 @@ const WhyChooseUs = () => {
               className={`glass rounded-xl p-8 text-center hover:shadow-glow transition-all duration-500 group ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 200}ms` }}
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                <f.icon className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-steel/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-steel/20 transition-colors">
+                <f.icon className="w-8 h-8 text-steel-light" />
               </div>
               <h3 className="font-heading text-xl font-bold text-foreground mb-3">{f.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
