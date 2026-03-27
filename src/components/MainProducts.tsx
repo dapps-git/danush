@@ -36,8 +36,9 @@ const MainProducts = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="products" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4" ref={ref}>
+    <section id="products" className="py-20 bg-secondary/30 relative">
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Our Complete <span className="text-gradient-primary">Product Range</span>
         </h2>
@@ -53,15 +54,15 @@ const MainProducts = () => {
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Wrench className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-lg bg-steel/10 flex items-center justify-center">
+                  <Wrench className="w-5 h-5 text-steel-light" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-foreground">{section.title}</h3>
               </div>
               <ul className="space-y-2">
                 {section.items.map((item) => (
                   <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-steel mt-1.5 shrink-0" />
                     {item}
                   </li>
                 ))}

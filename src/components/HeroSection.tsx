@@ -1,4 +1,3 @@
-import logoLight from "@/assets/logo-light.jpg";
 import heroBg from "@/assets/hero-bg.png";
 import productElbow from "@/assets/product-elbow.jpg";
 
@@ -14,32 +13,28 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/70" />
+      {/* Reduced dark overlay */}
+      <div className="absolute inset-0 bg-background/50" />
 
-      {/* Gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
+      {/* Reduced gradient overlay - lighter left to right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 pt-20">
-        <div className="flex-1 space-y-6 text-center lg:text-left">
-          <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-            <img src={logoLight} alt="Danush Trade Logo" className="h-16 w-16 rounded-lg object-cover shadow-glow" />
-          </div>
-
+        <div className="flex-1 space-y-6 text-left">
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
             Leading Steel Pipe Fittings{" "}
             <span className="text-gradient-primary">Manufacturer</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-steel-light max-w-xl mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl text-steel-light max-w-xl">
             High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across India & UAE
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-3.5 rounded-lg font-heading font-semibold text-lg hover:brightness-110 transition-all shadow-steel"
+              className="inline-flex items-center justify-center btn-premium text-primary-foreground px-8 py-3.5 rounded-lg font-heading font-semibold text-lg shadow-steel"
             >
               Get Quote
             </a>
@@ -55,7 +50,7 @@ const HeroSection = () => {
         {/* Floating product image */}
         <div className="flex-1 hidden lg:flex justify-center">
           <div className="relative">
-            <div className="absolute -inset-8 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -inset-8 bg-slate/10 rounded-full blur-3xl" />
             <img
               src={productElbow}
               alt="Stainless Steel 90° Pipe Elbow"
