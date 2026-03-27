@@ -23,7 +23,7 @@ const BestSellers = () => {
       <div className="absolute inset-0 bg-mesh-gradient" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
-          🔥 Best Selling <span className="text-gradient-primary">Products</span>
+           Best Selling <span className="text-gradient-primary">Products</span>
         </h2>
         <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           Top-rated stainless steel pipe fittings trusted by pipe elbow manufacturers across India

@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={logoDark} alt="Danush Trade" className="h-10 w-10 rounded object-cover" />
+              <img src={logoDark} alt="Danush Trade" className="h-20 w-20 rounded object-cover" />
               <span className="font-heading text-xl font-bold text-foreground">Danush Trade</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -44,7 +44,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
+ 
           {/* Contact */}
           <div>
             <h4 className="font-heading font-bold text-foreground mb-4">Contact</h4>

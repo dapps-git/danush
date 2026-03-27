@@ -51,11 +51,7 @@ const HeroSection = () => {
         <div className="flex-1 hidden lg:flex justify-center">
           <div className="relative">
             <div className="absolute -inset-8 bg-slate/10 rounded-full blur-3xl" />
-            <img
-              src={productElbow}
-              alt="Stainless Steel 90° Pipe Elbow"
-              className="relative w-80 h-80 object-cover rounded-2xl shadow-steel animate-float"
-            />
+           
           </div>
         </div>
       </div>

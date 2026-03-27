@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong shadow-steel py-2" : "bg-transparent py-4"}`}>
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logoDark} alt="Danush Trade" className="h-14 w-auto object-contain" />
+          <img src={logoDark} alt="Danush Trade" className="h-20 w-auto object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

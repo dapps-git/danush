@@ -13,7 +13,7 @@ const categories = [
 
 const ProductCategories = () => {
   const { ref, isVisible } = useScrollReveal();
-
+ 
   return (
     <section id="categories" className="py-20 bg-secondary/30 relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />

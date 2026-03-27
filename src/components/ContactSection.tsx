@@ -1,5 +1,6 @@
-import { Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail , } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -18,15 +19,28 @@ const ContactSection = () => {
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           <div className="space-y-6">
             <div className="glass rounded-xl p-6 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
-                <Phone className="w-6 h-6 text-steel-light" />
-              </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground mb-1">Phone</h3>
-                <a href="tel:+918669251123" className="text-steel-light hover:text-foreground transition-colors text-lg font-semibold">
-                  +91 866 925 1123
-                </a>
-              </div>
+    <h3 className="font-heading font-bold text-foreground mb-1">Phone</h3>
+    
+    {/* Call */}
+    <a
+      href="tel:+918669251123"
+      className="block text-steel-light hover:text-foreground transition-colors text-lg font-semibold"
+    >
+      +91 866 925 1123
+    </a>
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 mt-2 text-green-500 hover:text-green-600 transition-colors font-medium"
+    >
+      <FaWhatsapp className="w-5 h-5" />
+      Chat on WhatsApp
+    </a>
+  </div>
             </div>
 
             <div className="glass rounded-xl p-6 flex items-start gap-4">
