@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logoDark from "@/assets/logo-dark.jpg";
+import logoDark from "@/assets/danush-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
