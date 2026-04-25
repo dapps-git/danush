@@ -28,8 +28,8 @@ const WhyChooseUs = () => {
               className={`glass rounded-xl p-8 text-center hover:shadow-glow transition-all duration-500 group ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 200}ms` }}
             >
-              <div className="w-16 h-16 rounded-full bg-steel/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-steel/20 transition-colors">
-                <f.icon className="w-8 h-8 text-steel-light" />
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                <f.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-heading text-xl font-bold text-foreground mb-3">{f.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>

@@ -36,7 +36,7 @@ const MainProducts = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="products" className="py-20 bg-secondary/30 relative">
+    <section id="products" className="py-20 bg-secondary relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
@@ -54,8 +54,8 @@ const MainProducts = () => {
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-steel/10 flex items-center justify-center">
-                  <Wrench className="w-5 h-5 text-steel-light" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Wrench className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-foreground">{section.title}</h3>
               </div>

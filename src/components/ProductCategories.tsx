@@ -15,7 +15,7 @@ const ProductCategories = () => {
   const { ref, isVisible } = useScrollReveal();
  
   return (
-    <section id="categories" className="py-20 bg-secondary/30 relative">
+    <section id="categories" className="py-20 bg-card relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
@@ -45,7 +45,7 @@ const ProductCategories = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <h3 className="font-heading text-lg font-bold text-foreground mb-1">{cat.name}</h3>
-                <p className="text-xs text-steel-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">{cat.desc}</p>
+                <p className="text-xs text-foreground/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">{cat.desc}</p>
               </div>
             </div>
           ))}

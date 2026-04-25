@@ -6,7 +6,7 @@ const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30 relative">
+    <section id="contact" className="py-20 bg-card relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
@@ -25,7 +25,7 @@ const ContactSection = () => {
     {/* Call */}
     <a
       href="tel:+918669251123"
-      className="block text-steel-light hover:text-foreground transition-colors text-lg font-semibold"
+      className="block text-foreground/80 hover:text-primary transition-colors text-lg font-semibold"
     >
       +91 866 925 1123
     </a>
@@ -35,7 +35,7 @@ const ContactSection = () => {
       href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 mt-2 text-green-500 hover:text-green-600 transition-colors font-medium"
+      className="flex items-center gap-2 mt-2 text-foreground/80 hover:text-primary transition-colors font-medium"
     >
       <FaWhatsapp className="w-5 h-5" />
       Chat on WhatsApp
@@ -45,21 +45,21 @@ const ContactSection = () => {
 
             <div className="glass rounded-xl p-6 flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
-                <Mail className="w-6 h-6 text-steel-light" />
+                <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Email</h3>
-                <p className="text-steel-light">info@danushtrade.com</p>
+                <p className="text-foreground/80 font-medium">info@danushtrade.com</p>
               </div>
             </div>
 
             <div className="glass rounded-xl p-6 flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-steel-light" />
+                <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Address</h3>
-                <p className="text-steel-light text-sm leading-relaxed">
+                <p className="text-foreground/80 text-sm leading-relaxed font-medium">
                   Gala no 2. Shree Asthavinayak Industrial Premises Co-op Soc. Ltd.<br />
                   Dhumal Nagar, Waliv, Vasai (East),<br />
                   Dist. Palghar, Maharashtra - 401208
