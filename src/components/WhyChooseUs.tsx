@@ -1,5 +1,6 @@
 import { Shield, Globe, Wrench } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import herooImg from "@/assets/heroo.png";
 
 const features = [
   { icon: Shield, title: "ISO Certified", desc: "All products manufactured under strict ISO quality management systems ensuring global standards compliance." },
@@ -11,10 +12,10 @@ const WhyChooseUs = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="why-us" className="py-20 relative">
-      <div className="absolute inset-0 bg-mesh-gradient" />
+    <section id="why-us" className="py-20 bg-secondary relative">
+      <div className="absolute inset-0 bg-mesh-gradient opacity-50" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Why Choose <span className="text-gradient-primary">Danush Trade</span>
         </h2>
         <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
@@ -25,14 +26,27 @@ const WhyChooseUs = () => {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`glass rounded-xl p-8 text-center hover:shadow-glow transition-all duration-500 group ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`relative overflow-hidden rounded-2xl group transition-all duration-500 hover:shadow-steel ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 200}ms` }}
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
-                <f.icon className="w-8 h-8 text-primary" />
+              {/* Box Background Image */}
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src={herooImg} 
+                  alt={f.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60" 
+                />
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">{f.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+
+              {/* Box Content */}
+              <div className="relative z-10 p-8 text-center min-h-[320px] flex flex-col justify-center">
+                <div className="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <f.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-heading text-xl md:text-2xl font-black text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{f.title}</h3>
+                <p className="text-white font-bold text-sm md:text-base leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>

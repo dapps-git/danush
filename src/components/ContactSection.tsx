@@ -9,7 +9,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-card relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
           Get In <span className="text-gradient-primary">Touch</span>
         </h2>
         <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
@@ -35,9 +35,9 @@ const ContactSection = () => {
       href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 mt-2 text-foreground/80 hover:text-primary transition-colors font-medium"
+      className="flex items-center gap-2 mt-2 text-foreground/80 hover:text-[#25D366] transition-colors font-medium"
     >
-      <FaWhatsapp className="w-5 h-5" />
+      <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
       Chat on WhatsApp
     </a>
   </div>
