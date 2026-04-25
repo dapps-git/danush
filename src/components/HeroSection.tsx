@@ -13,11 +13,11 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Reduced dark overlay */}
-      <div className="absolute inset-0 bg-background/50" />
+      {/* Subtle overlay to soften the image slightly */}
+      <div className="absolute inset-0 bg-background/10" />
 
-      {/* Reduced gradient overlay - lighter left to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-transparent" />
+      {/* Gradient overlay just enough to keep text readable without hiding the image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 pt-20">
@@ -27,7 +27,7 @@ const HeroSection = () => {
             <span className="text-gradient-primary">Manufacturer</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-steel-light max-w-xl">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-xl">
             High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across India & UAE
           </p>
 
@@ -40,10 +40,26 @@ const HeroSection = () => {
             </a>
             <a
               href="#products"
-              className="inline-flex items-center justify-center border-2 border-steel text-steel-light px-8 py-3.5 rounded-lg font-heading font-semibold text-lg hover:bg-steel/10 transition-all"
+              className="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-3.5 rounded-lg font-heading font-semibold text-lg hover:bg-primary hover:text-white transition-all"
             >
               View Products
             </a>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-3 gap-4 pt-8 mt-8 border-t border-foreground/10">
+            <div>
+              <p className="font-heading text-3xl font-bold text-primary mb-1">10+</p>
+              <p className="text-xs md:text-sm text-foreground/80 font-medium leading-tight">Years<br/>Experience</p>
+            </div>
+            <div>
+              <p className="font-heading text-3xl font-bold text-primary mb-1">1+</p>
+              <p className="text-xs md:text-sm text-foreground/80 font-medium leading-tight">Export<br/>Countries</p>
+            </div>
+            <div>
+              <p className="font-heading text-3xl font-bold text-primary mb-1">100+</p>
+              <p className="text-xs md:text-sm text-foreground/80 font-medium leading-tight">Successful<br/>Clients</p>
+            </div>
           </div>
         </div>
 
