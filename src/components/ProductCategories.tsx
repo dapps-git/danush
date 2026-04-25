@@ -1,8 +1,8 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import productElbow from "@/assets/product-elbow.jpg";
-import productTee from "@/assets/product-tee.jpg";
-import productFlange from "@/assets/product-flange.jpg";
-import productReducer from "@/assets/product-reducer.jpg";
+import productElbow from "@/assets/product-e.png";
+import productTee from "@/assets/product-t.png";
+import productFlange from "@/assets/product-f.png";
+import productReducer from "@/assets/product-r.png";
 
 const categories = [
   { name: "Elbows", desc: "90°, 45°, Long Radius & Short Radius Elbows in SS & CS", img: productElbow },
@@ -13,39 +13,35 @@ const categories = [
 
 const ProductCategories = () => {
   const { ref, isVisible } = useScrollReveal();
- 
+
   return (
-    <section id="categories" className="py-20 bg-card relative">
-      <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+    <section id="categories" className="py-24 bg-card relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-4 text-foreground uppercase tracking-tight">
           Product <span className="text-gradient-primary">Categories</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Premium stainless steel pipe fittings manufactured to international standards
+        <p className="text-muted-foreground text-center font-bold mb-16 max-w-2xl mx-auto text-base md:text-lg">
+          Premium stainless steel pipe fittings manufactured to uncompromising international standards.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
           {categories.map((cat, i) => (
             <div
               key={cat.name}
-              className={`group relative overflow-hidden rounded-xl glass cursor-pointer transition-all duration-500 hover:shadow-steel ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group relative overflow-hidden rounded-2xl glass-strong cursor-pointer border border-white/5 transition-all duration-500 hover:shadow-steel hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 150}ms` }}
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="w-full aspect-square flex items-center justify-center bg-card/50 p-4">
                 <img
                   src={cat.img}
                   alt={cat.name}
                   loading="lazy"
-                  width={400}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="font-heading text-lg font-bold text-foreground mb-1">{cat.name}</h3>
-                <p className="text-xs text-foreground/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">{cat.desc}</p>
+              <div className="p-4 text-center border-t border-white/5">
+                 <h3 className="font-heading text-lg font-black text-foreground drop-shadow-sm">{cat.name}</h3>
               </div>
             </div>
           ))}

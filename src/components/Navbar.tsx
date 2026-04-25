@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import logoDark from "@/assets/danush-logo.png";
 
 const navLinks = [
@@ -29,12 +30,12 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-secondary-foreground hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} className="text-base font-bold text-foreground hover:text-primary transition-colors drop-shadow-sm">
               {l.label}
             </a>
           ))}
-          <a href="tel:+918669251123" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold">
-            <Phone className="w-4 h-4" /> Call Now
+          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold">
+            <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
           </a>
         </div>
 
@@ -46,12 +47,12 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden glass-strong mt-2 mx-4 rounded-lg p-4 space-y-3">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-secondary-foreground hover:text-primary transition-colors font-medium">
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-foreground hover:text-primary transition-colors font-bold text-lg">
               {l.label}
             </a>
           ))}
-          <a href="tel:+918669251123" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold justify-center">
-            <Phone className="w-4 h-4" /> Call Now
+          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold justify-center">
+            <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
           </a>
         </div>
       )}
