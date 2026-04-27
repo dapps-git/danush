@@ -22,12 +22,12 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 pt-20">
         <div className="flex-1 space-y-6 text-left">
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-foreground ">
             Leading Steel Pipe Fittings{" "}
             <span className="text-gradient-primary">Manufacturer</span>
           </h1>
 
-          <p className="text-base md:text-xl font-bold text-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)] max-w-xl">
+          <p className="text-base md:text-xl font-bold text-foreground  max-w-xl">
             High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across India & UAE
           </p>
 
@@ -72,8 +72,8 @@ const HeroSection = () => {
         {/* Floating space */}
         <div className="flex-1 hidden lg:flex justify-center">
           <div className="relative">
-             {/* Subtle glow kept very minimal */}
-             <div className="absolute -inset-8 bg-slate/5 rounded-full blur-3xl" />
+            {/* Subtle glow kept very minimal */}
+            <div className="absolute -inset-8 bg-slate/5 rounded-full blur-3xl" />
           </div>
         </div>
       </div>

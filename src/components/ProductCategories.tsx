@@ -41,7 +41,7 @@ const ProductCategories = () => {
                 />
               </div>
               <div className="p-4 text-center border-t border-white/5">
-                 <h3 className="font-heading text-lg font-black text-foreground drop-shadow-sm">{cat.name}</h3>
+                <h3 className="font-heading text-lg font-black text-foreground drop-shadow-sm">{cat.name}</h3>
               </div>
             </div>
           ))}

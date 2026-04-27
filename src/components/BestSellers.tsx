@@ -3,8 +3,8 @@ import productElbow from "@/assets/tees.png";
 import productTee from "@/assets/elbow.png";
 import productFlange from "@/assets/flange.png";
 import productReducer from "@/assets/reducer.png";
-import productCap from "@/assets/product-cap.jpg";
-import productCoupling from "@/assets/product-coupling.jpg";
+import productCap from "@/assets/cap.png";
+import productCoupling from "@/assets/pipe.png";
 
 const bestSellers = [
   { name: "Stainless Steel 90° Elbow", img: productElbow },
