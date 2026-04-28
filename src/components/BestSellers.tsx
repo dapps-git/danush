@@ -22,10 +22,10 @@ const BestSellers = () => {
     <section id="best-sellers" className="py-20 relative">
       <div className="absolute inset-0 bg-mesh-gradient" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Best Selling <span className="text-gradient-primary">Products</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium">
           Top-rated stainless steel pipe fittings trusted by pipe elbow manufacturers across India
         </p>
 
@@ -38,12 +38,12 @@ const BestSellers = () => {
             >
               <div className="relative w-full bg-card overflow-hidden flex items-center justify-center">
                 <img src={p.img} alt={p.name} loading="lazy" className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
-                <span className="absolute top-2 left-2 bg-accent text-accent-foreground text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full font-heading">
+                <span className="absolute top-2 left-2 bg-accent text-accent-foreground text-[10px] md:text-xs font-semibold px-2 md:px-3 py-1 rounded-full font-heading">
                   Top Selling
                 </span>
               </div>
               <div className="p-3 md:p-4">
-                <h3 className="font-heading text-sm md:text-base font-bold text-foreground">{p.name}</h3>
+                <h3 className="font-heading text-sm md:text-base font-semibold text-foreground leading-snug">{p.name}</h3>
               </div>
             </div>
           ))}

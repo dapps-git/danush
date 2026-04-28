@@ -15,10 +15,10 @@ const WhyChooseUs = () => {
     <section id="why-us" className="py-20 bg-secondary relative">
       <div className="absolute inset-0 bg-mesh-gradient opacity-50" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Why Choose <span className="text-gradient-primary">Danush Trade</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium">
           Trusted by leading industrial companies for high-quality butt weld fittings and carbon steel pipe fittings
         </p>
 
@@ -44,8 +44,8 @@ const WhyChooseUs = () => {
                 <div className="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <f.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl md:text-2xl font-black text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{f.title}</h3>
-                <p className="text-white font-bold text-sm md:text-base leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{f.desc}</p>
+                <h3 className="font-heading text-xl md:text-2xl font-semibold text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{f.title}</h3>
+                <p className="text-white/95 font-medium text-sm md:text-base leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{f.desc}</p>
               </div>
             </div>
           ))}

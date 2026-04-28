@@ -3,83 +3,61 @@ import { Counter } from "@/components/Counter";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image with subtle zoom animation */}
-      <div className="absolute inset-0">
+    <section id="home" className="relative min-h-screen flex items-center bg-[#2C497F] overflow-hidden">
+      {/* Full hero background image */}
+      <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
           alt="Industrial pipeline facility"
-          className="w-full h-full object-cover hero-bg-animate"
+          className="w-full h-full object-cover object-center opacity-80"
         />
+        <div className="absolute inset-0 bg-[#0B0D17]/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0D17]/90 via-[#2C497F]/70 to-[#0B0D17]/45" />
       </div>
 
-      {/* Subtle overlay to soften the image slightly */}
-      <div className="absolute inset-0 bg-background/20" />
-
-      {/* Gradient overlay just enough to keep text readable without hiding the image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/20 to-transparent" />
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 pt-20">
-        <div className="flex-1 space-y-6 text-left">
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-foreground ">
+      <div className="container mx-auto px-4 pt-24 md:pt-20 relative z-10">
+        <div className="space-y-5 md:space-y-7 text-center md:text-left max-w-2xl py-10 md:py-12">
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-[1.12] md:leading-[1.08] text-white">
             Leading Steel Pipe Fittings{" "}
-            <span className="text-gradient-primary">Manufacturer</span>
+            <span className="text-blue-100/95 font-semibold block sm:inline">Manufacturer</span>
           </h1>
 
-          <p className="text-base md:text-xl font-bold text-foreground  max-w-xl">
+          <p className="text-xs sm:text-base md:text-lg text-blue-100/95 max-w-xl mx-auto md:mx-0 leading-relaxed">
             High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across India & UAE
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-3 justify-center md:justify-start">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center btn-premium text-primary-foreground px-6 py-2.5 md:px-8 md:py-3.5 rounded-lg font-heading font-semibold text-base md:text-lg shadow-steel"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-[#1C325A] px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-blue-100 transition-colors"
             >
-              Get Quote
+              Get Quote &rarr;
             </a>
             <a
               href="#products"
-              className="inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2.5 md:px-8 md:py-3.5 rounded-lg font-heading font-semibold text-base md:text-lg hover:bg-primary hover:text-white transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-[#1C325A]/30 text-white px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-[#1C325A]/50 transition-colors"
             >
               View Products
             </a>
           </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-3 gap-4 pt-8 mt-8 border-t border-foreground/30">
-            <div>
-              <p className="font-heading text-4xl md:text-5xl font-black text-primary mb-1 drop-shadow-sm">
-                <Counter end={10} suffix="+" />
-              </p>
-              <p className="text-sm md:text-base text-foreground font-bold leading-tight">Years<br />Experience</p>
+          {/* Stats Section / Trusted By substitute */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-7 pt-4 pb-4 px-3 sm:px-4 md:px-6 mt-5 text-center md:text-left bg-white/10 backdrop-blur-md border border-white/25 rounded-2xl shadow-[0_8px_30px_rgba(11,13,23,0.35)]">
+            <div className="border-r border-white/15 pr-2 sm:pr-4">
+               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Experience</p>
+               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={10} suffix="+" /> Years</p>
             </div>
-            <div>
-              <p className="font-heading text-4xl md:text-5xl font-black text-primary mb-1 drop-shadow-sm">
-                <Counter end={1} suffix="+" />
-              </p>
-              <p className="text-sm md:text-base text-foreground font-bold leading-tight">Export<br />Countries</p>
+            <div className="border-r border-white/15 px-2 sm:px-4">
+               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Export</p>
+               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={1} suffix="+" /> Countries</p>
             </div>
-            <div>
-              <p className="font-heading text-4xl md:text-5xl font-black text-primary mb-1 drop-shadow-sm">
-                <Counter end={100} suffix="+" />
-              </p>
-              <p className="text-sm md:text-base text-foreground font-bold leading-tight">Successful<br />Clients</p>
+            <div className="pl-2 sm:pl-4">
+               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Trusted By</p>
+               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight">100+ Clients</p>
             </div>
-          </div>
-        </div>
-
-        {/* Floating space */}
-        <div className="flex-1 hidden lg:flex justify-center">
-          <div className="relative">
-            {/* Subtle glow kept very minimal */}
-            <div className="absolute -inset-8 bg-slate/5 rounded-full blur-3xl" />
           </div>
         </div>
       </div>
-
-      {/* Adjusted bottom shadow - kept extremely subtle to avoid "white block" look */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background/10 to-transparent" />
     </section>
   );
 };

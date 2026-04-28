@@ -18,10 +18,10 @@ const ProductCategories = () => {
     <section id="categories" className="py-24 bg-card relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-4 text-foreground uppercase tracking-tight">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Product <span className="text-gradient-primary">Categories</span>
         </h2>
-        <p className="text-muted-foreground text-center font-bold mb-16 max-w-2xl mx-auto text-base md:text-lg">
+        <p className="text-muted-foreground text-center font-medium mb-14 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
           Premium stainless steel pipe fittings manufactured to uncompromising international standards.
         </p>
 
@@ -41,7 +41,7 @@ const ProductCategories = () => {
                 />
               </div>
               <div className="p-4 text-center border-t border-white/5">
-                <h3 className="font-heading text-lg font-black text-foreground drop-shadow-sm">{cat.name}</h3>
+                <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground">{cat.name}</h3>
               </div>
             </div>
           ))}
