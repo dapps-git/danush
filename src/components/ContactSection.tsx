@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail , } from "lucide-react";
+import { Phone, MapPin, Mail } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -9,23 +9,26 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-card relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Get In <span className="text-gradient-primary">Touch</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium">
           Contact us for industrial flange supplier inquiries, bulk orders, and custom manufacturing
         </p>
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           <div className="space-y-6">
             <div className="glass rounded-xl p-6 flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg bg-steel/10 flex items-center justify-center shrink-0">
+                <Phone className="w-6 h-6 text-primary" />
+              </div>
               <div>
-    <h3 className="font-heading font-bold text-foreground mb-1">Phone</h3>
+    <h3 className="font-heading text-lg font-semibold text-foreground mb-1">Phone</h3>
     
     {/* Call */}
     <a
       href="tel:+918669251123"
-      className="block text-foreground/80 hover:text-primary transition-colors text-lg font-semibold"
+      className="block text-foreground/85 hover:text-primary transition-colors text-lg font-medium"
     >
       +91 866 925 1123
     </a>
@@ -35,7 +38,7 @@ const ContactSection = () => {
       href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 mt-2 text-foreground/80 hover:text-[#25D366] transition-colors font-medium"
+      className="flex items-center gap-2 mt-2 text-foreground/85 hover:text-[#25D366] transition-colors font-medium"
     >
       <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
       Chat on WhatsApp
@@ -48,8 +51,8 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground mb-1">Email</h3>
-                <p className="text-foreground/80 font-medium">info@danushtrade.com</p>
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">Email</h3>
+                <p className="text-foreground/85 font-medium">info@danushtrade.com</p>
               </div>
             </div>
 
@@ -58,8 +61,8 @@ const ContactSection = () => {
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground mb-1">Address</h3>
-                <p className="text-foreground/80 text-sm leading-relaxed font-medium">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">Address</h3>
+                <p className="text-foreground/85 text-sm leading-relaxed font-medium">
                   Gala no 2. Shree Asthavinayak Industrial Premises Co-op Soc. Ltd.<br />
                   Dhumal Nagar, Waliv, Vasai (East),<br />
                   Dist. Palghar, Maharashtra - 401208

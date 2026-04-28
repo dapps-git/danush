@@ -13,10 +13,10 @@ const CtaBanner = () => {
       <div className="absolute inset-0 bg-background/40" />
 
       <div ref={ref} className="relative z-10 container mx-auto px-4 text-center">
-        <h2 className={`font-heading text-3xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 uppercase tracking-tight transition-all duration-700 drop-shadow-lg ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-8"}`}>
+        <h2 className={`font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight transition-all duration-700 drop-shadow-lg ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-8"}`}>
           Looking for Bulk Pipe Fittings?
         </h2>
-        <p className={`text-foreground font-bold text-lg md:text-xl mb-10 max-w-2xl mx-auto transition-all duration-700 delay-150 drop-shadow-md ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-8"}`}>
+        <p className={`text-foreground font-medium text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-150 drop-shadow-md ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-8"}`}>
           Get competitive pricing on industrial pipe fittings. We supply high-quality artifacts to India, UAE & worldwide.
         </p>
         <div className={`transition-all duration-700 delay-300 ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-8"}`}>

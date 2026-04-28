@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import logoDark from "@/assets/danush-logo.png";
 
@@ -30,16 +30,22 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-base font-bold text-foreground hover:text-primary transition-colors drop-shadow-sm">
+            <a
+              key={l.href}
+              href={l.href}
+              className={`font-nav text-[17px] font-semibold tracking-[0.01em] transition-colors drop-shadow-sm ${
+                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-blue-100"
+              }`}
+            >
               {l.label}
             </a>
           ))}
-          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold">
+          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-nav font-semibold tracking-[0.01em]">
             <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
           </a>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground" aria-label="Toggle menu">
+        <button onClick={() => setOpen(!open)} className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`} aria-label="Toggle menu">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -47,11 +53,11 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden glass-strong mt-2 mx-4 rounded-lg p-4 space-y-3">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-foreground hover:text-primary transition-colors font-bold text-lg">
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-foreground hover:text-primary transition-colors font-semibold text-lg tracking-[0.01em]">
               {l.label}
             </a>
           ))}
-          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold justify-center">
+          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-nav font-semibold tracking-[0.01em] justify-center">
             <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
           </a>
         </div>

@@ -39,10 +39,10 @@ const MainProducts = () => {
     <section id="products" className="py-24 bg-secondary relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="container mx-auto px-1.5 md:px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-4 text-foreground uppercase tracking-tight">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Complete <span className="text-gradient-primary">Product Range</span>
         </h2>
-        <p className="text-muted-foreground text-center font-bold mb-10 max-w-2xl mx-auto text-base md:text-lg">
+        <p className="text-muted-foreground text-center font-medium mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
           Master supplier of premium industrial pipe fittings manufactured to global engineering standards.
         </p>
 
@@ -50,18 +50,18 @@ const MainProducts = () => {
           {productSections.map((section, i) => (
             <div
               key={section.title}
-              className={`glass rounded-2xl p-3 md:p-8 hover:shadow-steel transition-all duration-500 border border-white/5 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`glass rounded-2xl p-4 md:p-8 hover:shadow-steel transition-all duration-500 border border-white/5 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center shadow-inner">
                   <Wrench className="w-4 h-4 md:w-6 md:h-6 text-primary" />
                 </div>
-                <h3 className="font-heading text-sm md:text-xl font-black text-foreground tracking-tight">{section.title}</h3>
+                <h3 className="font-heading text-sm md:text-xl font-semibold text-foreground tracking-tight leading-snug">{section.title}</h3>
               </div>
               <ul className="space-y-2 md:space-y-3">
                 {section.items.map((item) => (
-                  <li key={item} className="text-[10px] md:text-sm font-semibold text-muted-foreground flex items-start gap-1.5 md:gap-3 group/item">
+                  <li key={item} className="text-[11px] md:text-sm font-medium text-muted-foreground flex items-start gap-1.5 md:gap-3 group/item leading-relaxed">
                     <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary mt-1 md:mt-1.5 shrink-0 opacity-40 group-hover/item:opacity-100 transition-opacity" />
                     <span className="leading-tight">{item}</span>
                   </li>
