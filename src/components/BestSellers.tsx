@@ -19,31 +19,34 @@ const BestSellers = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="best-sellers" className="py-20 relative">
-      <div className="absolute inset-0 bg-mesh-gradient" />
+    <section id="best-sellers" className="py-24 bg-white relative">
+      <div className="absolute inset-0 bg-slate-50/30" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
-          Best Selling <span className="text-gradient-primary">Products</span>
+        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-slate-900 tracking-tighter leading-tight">
+          Best Selling <span className="text-primary">Products</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium">
+        <p className="text-slate-600 text-center mb-8 md:mb-16 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">
           Top-rated stainless steel pipe fittings trusted by pipe elbow manufacturers across India
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
           {bestSellers.map((p, i) => (
             <div
               key={p.name}
-              className={`group glass rounded-xl overflow-hidden hover:shadow-steel transition-all duration-500 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="relative w-full bg-card overflow-hidden flex items-center justify-center">
-                <img src={p.img} alt={p.name} loading="lazy" className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
-                <span className="absolute top-2 left-2 bg-accent text-accent-foreground text-[10px] md:text-xs font-semibold px-2 md:px-3 py-1 rounded-full font-heading">
+              <div className="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-4 md:p-8">
+                <div className="absolute inset-0 bg-slate-50 opacity-30 group-hover:opacity-0 transition-opacity duration-500" />
+                <img src={p.img} alt={p.name} loading="lazy" className="relative z-10 w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
+
+                <div className="absolute top-2 left-2 bg-primary text-white text-[7px] md:text-[8px] font-bold px-1.5 py-0.5 rounded-full font-heading shadow-md z-20 uppercase tracking-wider">
                   Top Selling
-                </span>
+                </div>
               </div>
-              <div className="p-3 md:p-4">
-                <h3 className="font-heading text-sm md:text-base font-semibold text-foreground leading-snug">{p.name}</h3>
+
+              <div className="p-3 md:p-4 mt-auto text-center">
+                <h3 className="font-heading text-xs md:text-sm font-bold text-slate-800 leading-snug group-hover:text-primary transition-colors">{p.name}</h3>
               </div>
             </div>
           ))}

@@ -22,10 +22,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong shadow-steel py-2" : "bg-transparent py-4"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-primary shadow-xl ${scrolled ? "py-1.5" : "py-3"}`}>
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logoDark} alt="Danush Trade" className="h-20 w-auto object-contain" />
+          <img src={logoDark} alt="Danush Trade" className="h-12 md:h-16 w-auto object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -33,9 +33,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className={`font-nav text-[17px] font-semibold tracking-[0.01em] transition-colors drop-shadow-sm ${
-                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-blue-100"
-              }`}
+              className="font-nav text-[17px] font-semibold tracking-[0.01em] transition-colors drop-shadow-sm text-white hover:text-blue-100"
             >
               {l.label}
             </a>
@@ -51,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden glass-strong mt-2 mx-4 rounded-lg p-4 space-y-3">
+        <div className="md:hidden bg-primary shadow-2xl border border-white/10 mt-2 mx-4 rounded-lg p-4 space-y-3">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-foreground hover:text-primary transition-colors font-semibold text-lg tracking-[0.01em]">
               {l.label}

@@ -12,40 +12,34 @@ const WhyChooseUs = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="why-us" className="py-20 bg-secondary relative">
-      <div className="absolute inset-0 bg-mesh-gradient opacity-50" />
+    <section id="why-us" className="py-24 bg-white relative">
+      <div className="absolute inset-0 bg-slate-50/30" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
-          Why Choose <span className="text-gradient-primary">Danush Trade</span>
+        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-[#00072D] tracking-tighter leading-tight">
+          Why Choose <span className="text-primary underline decoration-primary/20 underline-offset-8">Danush Trade</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium">
+        <p className="text-slate-600 text-center mb-12 md:mb-8 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">
           Trusted by leading industrial companies for high-quality butt weld fittings and carbon steel pipe fittings
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-6xl mx-auto">
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`relative overflow-hidden rounded-2xl group transition-all duration-500 hover:shadow-steel ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`relative flex flex-col min-h-[220px] md:min-h-[300px] overflow-hidden rounded-xl group transition-all duration-500 bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 200}ms` }}
             >
-              {/* Box Background Image */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src={herooImg} 
-                  alt={f.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60" 
-                />
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
+              {/* Box Content */}
+              <div className="relative z-10 p-4 md:p-8 text-center flex-grow flex flex-col items-center justify-center">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 border border-primary/10">
+                  <f.icon className="w-5 h-5 md:w-8 md:h-8 text-primary" />
+                </div>
+                <h3 className="font-heading text-sm md:text-xl font-bold text-slate-800 mb-2 md:mb-3 tracking-tight">{f.title}</h3>
+                <p className="text-slate-600 font-medium text-[10px] md:text-sm leading-relaxed">{f.desc}</p>
               </div>
 
-              {/* Box Content */}
-              <div className="relative z-10 p-8 text-center min-h-[320px] flex flex-col justify-center">
-                <div className="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <f.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl md:text-2xl font-semibold text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{f.title}</h3>
-                <p className="text-white/95 font-medium text-sm md:text-base leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{f.desc}</p>
+              <div className="absolute bottom-0 left-0 h-1 bg-primary/10 w-full">
+                <div className="h-full bg-primary w-0 group-hover:w-full transition-all duration-700 ease-out" />
               </div>
             </div>
           ))}
