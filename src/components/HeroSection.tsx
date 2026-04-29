@@ -12,7 +12,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-center opacity-80"
         />
         <div className="absolute inset-0 bg-[#0B0D17]/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0D17]/90 via-[#2C497F]/70 to-[#0B0D17]/45" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0B0D17]/90 via-[#2C497F]/70 to-[#0B0D17]/45" /> */}
       </div>
 
       <div className="container mx-auto px-4 pt-24 md:pt-20 relative z-10">
@@ -44,16 +44,16 @@ const HeroSection = () => {
           {/* Stats Section / Trusted By substitute */}
           <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-7 pt-4 pb-4 px-3 sm:px-4 md:px-6 mt-5 text-center md:text-left bg-white/10 backdrop-blur-md border border-white/25 rounded-2xl shadow-[0_8px_30px_rgba(11,13,23,0.35)]">
             <div className="border-r border-white/15 pr-2 sm:pr-4">
-               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Experience</p>
-               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={10} suffix="+" /> Years</p>
+              <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Experience</p>
+              <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={10} suffix="+" /> Years</p>
             </div>
             <div className="border-r border-white/15 px-2 sm:px-4">
-               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Export</p>
-               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={1} suffix="+" /> Countries</p>
+              <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Export</p>
+              <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={1} suffix="+" /> Countries</p>
             </div>
             <div className="pl-2 sm:pl-4">
-               <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Trusted By</p>
-               <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight">100+ Clients</p>
+              <p className="text-blue-100/95 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] mb-2">Trusted By</p>
+              <p className="text-sm sm:text-base md:text-xl font-semibold text-white leading-tight"><Counter end={100} suffix="+" /> Clients</p>
             </div>
           </div>
         </div>

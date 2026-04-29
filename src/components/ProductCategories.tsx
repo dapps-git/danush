@@ -15,33 +15,35 @@ const ProductCategories = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="categories" className="py-24 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+    <section id="categories" className="py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
-          Product <span className="text-gradient-primary">Categories</span>
+        <h2 className="font-heading text-2xl md:text-4xl font-black text-center mb-4 md:mb-6 text-slate-900 tracking-tighter leading-tight">
+          Product <span className="text-primary">Categories</span>
         </h2>
-        <p className="text-muted-foreground text-center font-medium mb-14 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        <p className="text-slate-600 text-center font-medium mb-8 md:mb-10 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed">
           Premium stainless steel pipe fittings manufactured to uncompromising international standards.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 max-w-6xl mx-auto">
           {categories.map((cat, i) => (
             <div
               key={cat.name}
-              className={`group relative overflow-hidden rounded-2xl glass-strong cursor-pointer border border-white/5 transition-all duration-500 hover:shadow-steel hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group flex flex-col h-full relative overflow-hidden rounded-xl bg-white cursor-pointer border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 150}ms` }}
             >
-              <div className="w-full aspect-square flex items-center justify-center bg-card/50 p-4">
+              <div className="w-full aspect-[4/3] flex items-center justify-center bg-white p-4 relative">
+                <div className="absolute inset-0 bg-slate-50/30 group-hover:bg-white transition-colors duration-500" />
                 <img
                   src={cat.img}
                   alt={cat.name}
                   loading="lazy"
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                  className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="p-4 text-center border-t border-white/5">
-                <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground">{cat.name}</h3>
+
+              <div className="p-3 md:p-4 text-center mt-auto relative z-10">
+                <h3 className="font-heading text-sm md:text-base font-bold text-slate-800 tracking-tight group-hover:text-primary transition-colors">{cat.name}</h3>
               </div>
             </div>
           ))}
