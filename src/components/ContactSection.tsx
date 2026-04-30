@@ -9,10 +9,10 @@ const ContactSection = () => {
     <section id="contact" className="py-24 bg-white relative">
       <div className="absolute inset-0 bg-slate-50/50" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-slate-900 tracking-tighter leading-tight">
+        <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-slate-900 tracking-tighter leading-tight">
           Get In <span className="text-primary">Touch</span>
         </h2>
-        <p className="text-slate-600 text-center mb-8 md:mb-16 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">
+        <p className="text-slate-600 text-center mb-8 md:mb-16 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-normal">
           Contact us for industrial flange supplier inquiries, bulk orders, and custom manufacturing
         </p>
 
@@ -23,10 +23,10 @@ const ContactSection = () => {
                 <Phone className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-1">Phone</h3>
+                <h3 className="font-heading text-lg font-medium text-slate-800 mb-1">Phone</h3>
                 <a
                   href="tel:+918669251123"
-                  className="block text-slate-700 hover:text-primary transition-colors text-base font-bold"
+                  className="block text-slate-700 hover:text-primary transition-colors text-base font-normal"
                 >
                   +91 866 925 1123
                 </a>
@@ -34,7 +34,7 @@ const ContactSection = () => {
                   href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 mt-2 text-slate-500 hover:text-[#25D366] transition-colors font-bold text-sm"
+                  className="flex items-center gap-2 mt-2 text-slate-500 hover:text-[#25D366] transition-colors font-normal text-sm"
                 >
                   <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
                   Chat on WhatsApp
@@ -47,8 +47,8 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-1">Email</h3>
-                <p className="text-slate-700 font-bold text-base">info@danushtrade.com</p>
+                <h3 className="font-heading text-lg font-medium text-slate-800 mb-1">Email</h3>
+                <p className="text-slate-700 font-normal text-base">info@danushtrade.com</p>
               </div>
             </div>
 
@@ -57,8 +57,8 @@ const ContactSection = () => {
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-slate-800 mb-1">Address</h3>
-                <p className="text-slate-700 text-sm leading-relaxed font-bold">
+                <h3 className="font-heading text-lg font-medium text-slate-800 mb-1">Address</h3>
+                <p className="text-slate-700 text-sm leading-relaxed font-normal">
                   Gala no 2. Shree Asthavinayak Industrial Premises Co-op Soc. Ltd.<br />
                   Dhumal Nagar, Waliv, Vasai (East),<br />
                   Dist. Palghar, Maharashtra - 401208
