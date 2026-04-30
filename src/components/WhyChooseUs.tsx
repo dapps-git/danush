@@ -31,8 +31,8 @@ const WhyChooseUs = () => {
             >
               {/* Box Content */}
               <div className="relative z-10 p-4 md:p-8 text-center flex-grow flex flex-col items-center justify-center">
-                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 border border-primary/10">
-                  <f.icon className="w-5 h-5 md:w-8 md:h-8 text-primary" />
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl bg-primary flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                  <f.icon className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-sm md:text-xl font-bold text-slate-800 mb-2 md:mb-3 tracking-tight">{f.title}</h3>
                 <p className="text-slate-600 font-medium text-[10px] md:text-sm leading-relaxed">{f.desc}</p>
