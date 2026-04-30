@@ -3,12 +3,13 @@ import logoDark from "@/assets/danush-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white border-t border-white/10 pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="relative overflow-hidden bg-[#0B5FA5] text-white border-t border-white/10 pt-16 pb-8">
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),transparent_35%,rgba(8,75,131,0.45)_70%)] opacity-80" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="flex flex-col items-start text-left">
-            <div className="mb-6 -ml-6">
+            <div className="mb-6 -ml-6 transition-transform duration-300 hover:translate-x-1">
               <img src={logoDark} alt="Danush Trade" className="h-14 md:h-16 w-auto object-contain" />
             </div>
             <p className="text-[11px] md:text-sm text-blue-100 leading-relaxed max-w-xs">
@@ -22,7 +23,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {["Home", "Products", "Why Us", "Best Sellers", "Contact"].map((l) => (
                 <li key={l}>
-                  <a href={`#${l.toLowerCase().replace(" ", "-")}`} className="text-[11px] md:text-sm text-blue-100 hover:text-white transition-colors">
+                  <a href={`#${l.toLowerCase().replace(" ", "-")}`} className="inline-block text-[11px] md:text-sm text-blue-100 transition-all duration-300 hover:translate-x-1 hover:text-white">
                     {l}
                   </a>
                 </li>
@@ -36,7 +37,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {["Pipe Elbows", "Tee Fittings", "Industrial Flanges", "Pipe Reducers", "Couplings", "Pipe Caps", "Custom Fittings"].map((p) => (
                 <li key={p}>
-                  <a href="#products" className="text-[11px] md:text-sm text-blue-100 hover:text-white transition-colors">
+                  <a href="#products" className="inline-block text-[11px] md:text-sm text-blue-100 transition-all duration-300 hover:translate-x-1 hover:text-white">
                     {p}
                   </a>
                 </li>

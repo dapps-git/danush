@@ -1,5 +1,6 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import logoDark from "@/assets/danush-logo.png";
 
@@ -9,6 +10,24 @@ const navLinks = [
   { label: "Why Us", href: "#why-us" },
   { label: "Best Sellers", href: "#best-sellers" },
   { label: "Contact", href: "#contact" },
+];
+
+const contactInfo = [
+  {
+    label: "+91 866 925 1123",
+    href: "tel:+918669251123",
+    icon: Phone,
+  },
+  {
+    label: "info@danushtrade.com",
+    href: "mailto:info@danushtrade.com",
+    icon: Mail,
+  },
+  {
+    label: "Vasai (East), Maharashtra",
+    href: "#contact",
+    icon: MapPin,
+  },
 ];
 
 const Navbar = () => {
@@ -22,45 +41,59 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-primary shadow-xl ${scrolled ? "py-1.5" : "py-3"}`}>
-      <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logoDark} alt="Danush Trade" className="h-12 md:h-16 w-auto object-contain" />
-        </a>
-
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="font-nav text-[17px] font-semibold tracking-[0.01em] transition-colors drop-shadow-sm text-white hover:text-blue-100"
-            >
-              {l.label}
+    <header className="fixed top-0 left-0 right-0 z-50 shadow-xl">
+      <div className="bg-[#0B5FA5] text-white">
+        <div className="container mx-auto flex min-h-9 flex-wrap items-center justify-center gap-x-7 gap-y-1 px-4 py-1.5 text-[11px] font-semibold sm:text-xs md:text-sm">
+          {contactInfo.map(({ label, href, icon: Icon }) => (
+            <a key={label} href={href} className="flex items-center gap-1.5 transition-colors hover:text-blue-100 last:hidden md:last:flex">
+              <Icon className="h-3.5 w-3.5 shrink-0" />
+              <span className="whitespace-nowrap">{label}</span>
             </a>
           ))}
-          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-nav font-semibold tracking-[0.01em]">
-            <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
-          </a>
         </div>
-
-        <button onClick={() => setOpen(!open)} className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`} aria-label="Toggle menu">
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
 
-      {open && (
-        <div className="md:hidden bg-primary shadow-2xl border border-white/10 mt-2 mx-4 rounded-lg p-4 space-y-3">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-foreground hover:text-primary transition-colors font-semibold text-lg tracking-[0.01em]">
-              {l.label}
-            </a>
-          ))}
-          <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 btn-premium text-primary-foreground px-4 py-2 rounded-lg text-sm font-nav font-semibold tracking-[0.01em] justify-center">
-            <FaWhatsapp className="w-4 h-4 text-[#25D366]" /> Call Now
+      {/* Main Navbar */}
+      <nav className={`bg-white transition-all duration-500 ${scrolled ? "py-1.5" : "py-3"}`}>
+        <div className="container mx-auto flex items-center justify-between px-4">
+          <a href="#home" className="flex items-center gap-2">
+            <img src={logoDark} alt="Danush Trade" className="h-12 w-auto object-contain md:h-16" />
           </a>
+
+          <div className="hidden items-center gap-8 md:flex">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="font-nav text-[17px] font-semibold tracking-[0.01em] text-slate-700 transition-colors hover:text-[#0B5FA5]"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-[#0B5FA5] px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-[#084B83]">
+              <FaWhatsapp className="h-4 w-4 text-white" /> Call Now
+            </a>
+          </div>
+
+          <button onClick={() => setOpen(!open)} className="text-slate-800 md:hidden" aria-label="Toggle menu">
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
-      )}
-    </nav>
+
+        {open && (
+          <div className="mx-4 mt-2 space-y-3 rounded-lg border border-slate-200 bg-white p-4 shadow-2xl md:hidden">
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-lg font-semibold tracking-[0.01em] text-slate-800 transition-colors hover:text-[#0B5FA5]">
+                {l.label}
+              </a>
+            ))}
+            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-lg bg-[#0B5FA5] px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-[#084B83]">
+              <FaWhatsapp className="h-4 w-4 text-white" /> Call Now
+            </a>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
 
