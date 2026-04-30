@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 shadow-xl">
-      <div className="bg-[#346191] text-white">
+      <div className="bg-primary text-white">
         <div className="container mx-auto flex min-h-9 flex-wrap items-center justify-center gap-x-7 gap-y-1 px-4 py-1.5 text-[11px] font-semibold sm:text-xs md:text-sm">
           {contactInfo.map(({ label, href, icon: Icon }) => (
             <a key={label} href={href} className="flex items-center gap-1.5 transition-colors hover:text-blue-100 last:hidden md:last:flex">
@@ -65,12 +65,12 @@ const Navbar = () => {
               <a
                 key={l.href}
                 href={l.href}
-                className="font-nav text-[17px] font-semibold tracking-[0.01em] text-slate-700 transition-colors hover:text-[#346191]"
+                className="font-nav text-[17px] font-semibold tracking-[0.01em] text-slate-700 transition-colors hover:text-primary"
               >
                 {l.label}
               </a>
             ))}
-            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-[#346191] px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-[#2a5179]">
+            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-primary/85">
               <FaWhatsapp className="h-4 w-4 text-white" /> Call Now
             </a>
           </div>
@@ -83,11 +83,11 @@ const Navbar = () => {
         {open && (
           <div className="mx-4 mt-2 space-y-3 rounded-lg border border-slate-200 bg-white p-4 shadow-2xl md:hidden">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-lg font-semibold tracking-[0.01em] text-slate-800 transition-colors hover:text-[#346191]">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block font-nav text-lg font-semibold tracking-[0.01em] text-slate-800 transition-colors hover:text-primary">
                 {l.label}
               </a>
             ))}
-            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-lg bg-[#346191] px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-[#2a5179]">
+            <a href="https://wa.me/918669251123?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold tracking-[0.01em] text-white transition-colors hover:bg-primary/85">
               <FaWhatsapp className="h-4 w-4 text-white" /> Call Now
             </a>
           </div>
