@@ -1,4 +1,4 @@
-import { Shield, Globe, Wrench } from "lucide-react";
+import { Shield, Globe, Wrench, Truck } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import herooImg from "@/assets/heroo.png";
 
@@ -6,6 +6,7 @@ const features = [
   { icon: Shield, title: "ISO Certified", desc: "All products manufactured under strict ISO quality management systems ensuring global standards compliance." },
   { icon: Globe, title: "Export Quality", desc: "Supplying premium pipe fittings to industries across India, UAE, Middle East, Europe and worldwide." },
   { icon: Wrench, title: "Custom Manufacturing", desc: "Bespoke fabricated fittings tailored to your exact specifications with precision engineering." },
+  { icon: Truck, title: "On-Time Delivery", desc: "Reliable and fast dispatch with pan-India logistics support, ensuring your orders arrive on schedule every time." },
 ];
 
 const WhyChooseUs = () => {
@@ -22,7 +23,7 @@ const WhyChooseUs = () => {
           Trusted by leading industrial companies for high-quality butt weld fittings and carbon steel pipe fittings
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 max-w-6xl mx-auto">
           {features.map((f, i) => (
             <div
               key={f.title}
