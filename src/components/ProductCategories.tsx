@@ -25,25 +25,31 @@ const ProductCategories = () => {
           Premium stainless steel pipe fittings manufactured to uncompromising international standards.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
           {categories.map((cat, i) => (
             <div
               key={cat.name}
-              className={`group flex flex-col h-full relative overflow-hidden rounded-xl bg-white cursor-pointer border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group flex flex-col h-full relative overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] transition-all duration-700 hover:shadow-[0_20px_50px_rgba(34,1,53,0.1)] hover:-translate-y-2 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 150}ms` }}
             >
-              <div className="w-full aspect-[4/3] flex items-center justify-center bg-white p-4 relative">
-                <div className="absolute inset-0 bg-slate-50/30 group-hover:bg-white transition-colors duration-500" />
-                <img
-                  src={cat.img}
-                  alt={cat.name}
-                  loading="lazy"
-                  className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
-                />
+              <div className="w-full h-40 md:h-56 p-4 flex-none">
+                <div className="w-full h-full bg-slate-50 rounded-xl flex items-center justify-center p-4 relative overflow-hidden group-hover:bg-white transition-colors duration-500 shadow-inner">
+                  <img
+                    src={cat.img}
+                    alt={cat.name}
+                    loading="lazy"
+                    className="relative z-10 w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                </div>
               </div>
 
-              <div className="p-3 md:p-4 text-center mt-auto relative z-10">
-                <h3 className="font-heading text-sm md:text-base font-bold text-slate-800 tracking-tight group-hover:text-primary transition-colors">{cat.name}</h3>
+              <div className="p-4 md:p-6 text-center mt-auto relative z-10 border-t border-slate-50 bg-white flex flex-col items-center">
+                <div className="min-h-[32px] md:min-h-[40px] flex items-center justify-center">
+                  <h3 className="font-heading text-[10px] md:text-xs font-bold text-slate-800 tracking-widest group-hover:text-primary transition-colors duration-300 uppercase leading-tight">
+                    {cat.name}
+                  </h3>
+                </div>
+                <div className="w-8 h-0.5 bg-primary/10 mt-3 transition-all duration-500 group-hover:w-12 group-hover:bg-primary" />
               </div>
             </div>
           ))}
@@ -52,5 +58,4 @@ const ProductCategories = () => {
     </section>
   );
 };
-
 export default ProductCategories;

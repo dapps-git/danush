@@ -37,7 +37,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-[#2C497F] overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center bg-[#220135] overflow-hidden">
       <div className="absolute inset-0 z-0">
         {heroSlides.map((slide, index) => (
           <img
@@ -64,13 +64,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 pt-3 justify-center md:justify-start">
             <a
               href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-[#1C325A] px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-blue-100 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-[#220135] px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-blue-100 transition-colors"
             >
               Get Quote &rarr;
             </a>
             <a
               href="#products"
-              className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-[#1C325A]/30 text-white px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-[#1C325A]/50 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center border border-white/40 bg-[#220135]/30 text-white px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-[#220135]/50 transition-colors"
             >
               View Products
             </a>
@@ -96,5 +96,4 @@ const HeroSection = () => {
     </section>
   );
 };
-
 export default HeroSection;

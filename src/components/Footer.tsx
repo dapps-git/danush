@@ -4,7 +4,7 @@ import logoDark from "@/assets/danush-logo.png";
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-primary text-white border-t border-white/10 pt-16 pb-8">
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),transparent_35%,rgba(32,65,110,0.45)_70%)] opacity-80" />
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),transparent_35%,rgba(34,1,53,0.45)_70%)] opacity-80" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
