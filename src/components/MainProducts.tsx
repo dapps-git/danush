@@ -85,5 +85,4 @@ const MainProducts = () => {
     </section>
   );
 };
-
 export default MainProducts;

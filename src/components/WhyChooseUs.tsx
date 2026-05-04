@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
     <section id="why-us" className="py-24 bg-white relative">
       <div className="absolute inset-0 bg-slate-50/30" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-[#00072D] tracking-tighter leading-tight">
+        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-[#220135] tracking-tighter leading-tight">
           Why Choose <span className="text-primary underline decoration-primary/20 underline-offset-8">Danush Trade</span>
         </h2>
         <p className="text-slate-600 text-center mb-12 md:mb-8 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">

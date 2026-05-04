@@ -19,34 +19,45 @@ const BestSellers = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="best-sellers" className="py-24 bg-white relative">
-      <div className="absolute inset-0 bg-slate-50/30" />
+    <section id="best-sellers" className="py-24 bg-primary relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-white/[0.03] bg-[size:30px_30px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
+      
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-slate-900 tracking-tighter leading-tight">
-          Best Selling <span className="text-primary">Products</span>
-        </h2>
-        <p className="text-slate-600 text-center mb-8 md:mb-16 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">
-          Top-rated stainless steel pipe fittings trusted by pipe elbow manufacturers across India
-        </p>
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="font-heading text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-4 uppercase">
+            Best Selling <span className="text-white/40">Products</span>
+          </h2>
+          <div className="w-20 h-1 bg-white/20 mx-auto rounded-full" />
+          <p className="text-white/60 mt-6 max-w-2xl mx-auto text-sm md:text-lg font-medium leading-relaxed">
+            Precision-engineered industrial fittings trusted by global partners for high-pressure applications.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
           {bestSellers.map((p, i) => (
             <div
               key={p.name}
-              className={`group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              className={`group flex flex-col h-full bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-700 hover:bg-white/10 hover:-translate-y-2 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-4 md:p-8">
-                <div className="absolute inset-0 bg-slate-50 opacity-30 group-hover:opacity-0 transition-opacity duration-500" />
-                <img src={p.img} alt={p.name} loading="lazy" className="relative z-10 w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
-
-                <div className="absolute top-2 left-2 bg-primary text-white text-[7px] md:text-[8px] font-bold px-1.5 py-0.5 rounded-full font-heading shadow-md z-20 uppercase tracking-wider">
-                  Top Selling
+              <div className="relative w-full h-44 md:h-64 p-4 flex-none">
+                <div className="w-full h-full bg-white rounded-2xl flex items-center justify-center p-6 shadow-inner relative overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-transparent opacity-50" />
+                  <img src={p.img} alt={p.name} loading="lazy" className="relative z-10 w-full h-full object-contain group-hover:scale-105 transition-transform duration-1000 ease-out" />
+                </div>
+                <div className="absolute top-8 left-8 bg-primary/90 backdrop-blur-sm text-white text-[8px] font-bold px-3 py-1 rounded-full font-heading shadow-lg z-20 uppercase tracking-widest border border-white/10">
+                  Top Rated
                 </div>
               </div>
 
-              <div className="p-3 md:p-4 mt-auto text-center">
-                <h3 className="font-heading text-xs md:text-sm font-bold text-slate-800 leading-snug group-hover:text-primary transition-colors">{p.name}</h3>
+              <div className="p-6 md:p-8 flex flex-col items-center justify-center flex-grow">
+                <div className="min-h-[48px] flex items-center justify-center">
+                  <h3 className="font-heading text-[11px] md:text-sm font-bold text-white leading-tight uppercase tracking-[0.15em] text-center group-hover:text-white/90 transition-colors">
+                    {p.name}
+                  </h3>
+                </div>
+                <div className="w-8 h-0.5 bg-white/20 mt-4 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
               </div>
             </div>
           ))}
@@ -55,5 +66,4 @@ const BestSellers = () => {
     </section>
   );
 };
-
 export default BestSellers;
