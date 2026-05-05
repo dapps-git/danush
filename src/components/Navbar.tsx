@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import logoDark from "@/assets/danush-logo.png";
+import logoDark from "@/assets/navbar.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className={`bg-white transition-all duration-500 ${scrolled ? "py-1.5" : "py-3"}`}>
+      <nav className={`bg-white transition-all duration-500 ${scrolled ? "py-1" : "py-2"}`}>
         <div className="container mx-auto flex items-center justify-between px-4">
           <a href="#home" className="flex items-center gap-2">
             <img src={logoDark} alt="Danush Trade" className="h-12 w-auto object-contain md:h-16" />
@@ -65,7 +65,7 @@ const Navbar = () => {
               <a
                 key={l.href}
                 href={l.href}
-                className="font-nav text-[17px] font-semibold tracking-[0.01em] text-slate-700 transition-colors hover:text-primary"
+                className="font-nav text-[14px] font-normal tracking-wide text-slate-600 transition-colors hover:text-primary"
               >
                 {l.label}
               </a>
