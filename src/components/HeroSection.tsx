@@ -54,7 +54,9 @@ const HeroSection = () => {
         <div className="space-y-5 md:space-y-7 text-center md:text-left max-w-2xl py-10 md:py-12">
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-[1.12] md:leading-[1.08] text-white">
             Leading Steel Pipe Fittings{" "}
-            <span className="text-blue-100/95 font-semibold block sm:inline">Manufacturer</span>
+            <span className="text-white font-semibold block sm:inline">
+              Manufacturer
+            </span>
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-blue-100/95 max-w-xl mx-auto md:mx-0 leading-relaxed">

@@ -1,5 +1,5 @@
 import { Phone, MapPin, Mail } from "lucide-react";
-import logoDark from "@/assets/danush-logo.png";
+import logoDark from "@/assets/navbar.png";
 
 const Footer = () => {
   return (
@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="flex flex-col items-start text-left">
-            <div className="mb-6 -ml-6 transition-transform duration-300 hover:translate-x-1">
-              <img src={logoDark} alt="Danush Trade" className="h-14 md:h-16 w-auto object-contain" />
+            <div className="mb-4 transition-transform duration-300 hover:translate-x-1">
+              <img src={logoDark} alt="Danush Trade" className="h-10 md:h-12 w-auto object-contain" />
             </div>
             <p className="text-[11px] md:text-sm text-blue-100 leading-relaxed max-w-xs">
               Leading steel pipe fittings manufacturer and industrial pipe fittings supplier in India. Exporting to UAE, Middle East & worldwide.
