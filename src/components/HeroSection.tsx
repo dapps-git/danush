@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Counter } from "@/components/Counter";
-import heroOne from "@/assets/hero-bg.png";
+import heroOne from "@/assets/hero1.webp";
 import heroTwo from "@/assets/hero2.png";
 import heroThree from "@/assets/heroo.webp";
 
