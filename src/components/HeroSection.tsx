@@ -68,7 +68,7 @@ const HeroSection = () => {
               href="#contact"
               className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-[#220135] px-7 py-3 rounded-md text-sm font-semibold tracking-wide hover:bg-blue-100 transition-colors"
             >
-              Get Quote &rarr;
+              Get In Touch &rarr;
             </a>
             <a
               href="#products"
