@@ -60,7 +60,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-blue-100/95 max-w-xl mx-auto md:mx-0 leading-relaxed">
-            High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across India & UAE
+            High-Quality Stainless Steel Elbows, Tees & Flanges — Trusted by industries across  KSA
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-3 justify-center md:justify-start">

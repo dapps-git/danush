@@ -21,7 +21,7 @@ const CtaBanner = () => {
             Looking for <span className="text-white underline decoration-white/30 underline-offset-8">Bulk</span> Pipe Fittings?
           </h2>
           <p className={`text-white/70 font-medium text-sm md:text-base mb-8 leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-12"}`}>
-            Get competitive factory-direct pricing on industrial pipe fittings. We supply high-precision solutions to India, UAE & worldwide.
+            Get competitive factory-direct pricing on industrial pipe fittings. We supply high-precision solutions to KSA
           </p>
           <div className={`flex flex-wrap justify-center gap-6 transition-all duration-1000 delay-400 ${isVisible ? "animate-fade-up opacity-100" : "opacity-0 translate-y-12"}`}>
             <a

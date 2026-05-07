@@ -13,7 +13,7 @@ const Footer = () => {
               <img src={logoDark} alt="Danush Trade" className="h-10 md:h-12 w-auto object-contain" />
             </div>
             <p className="text-[11px] md:text-sm text-blue-100 leading-relaxed max-w-xs">
-              Leading steel pipe fittings manufacturer and industrial pipe fittings supplier in India. Exporting to UAE, Middle East & worldwide.
+              Leading steel pipe fittings manufacturer and industrial pipe fittings supplier in India. Exporting to KSA.
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-6 text-center">
           <p className="text-[10px] md:text-sm text-blue-200">
-            © {new Date().getFullYear()} Danush Trade. All rights reserved. | Steel Pipe Fittings Manufacturer & Supplier
+            © {new Date().getFullYear()} Danush Industrial Trade. All rights reserved. | Steel Pipe Fittings Manufacturer & Supplier
           </p>
         </div>
       </div>

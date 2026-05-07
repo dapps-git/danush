@@ -4,7 +4,9 @@ import herooImg from "@/assets/heroo.png";
 
 const features = [
   { icon: Shield, title: "ISO Certified", desc: "All products manufactured under strict ISO quality management systems ensuring global standards compliance." },
-  { icon: Globe, title: "Export Quality", desc: "Supplying premium pipe fittings to industries across India, UAE, Middle East, Europe and worldwide." },
+  {
+    icon: Globe, title: "Export Quality", desc: `Supplying premium pipe  fittings to  industries across KSA,
+     Middle East, Europe and worldwide.` },
   { icon: Wrench, title: "Custom Manufacturing", desc: "Bespoke fabricated fittings tailored to your exact specifications with precision engineering." },
   { icon: Truck, title: "On-Time Delivery", desc: "Reliable and fast dispatch with pan-India logistics support, ensuring your orders arrive on schedule every time." },
 ];
@@ -17,7 +19,7 @@ const WhyChooseUs = () => {
       <div className="absolute inset-0 bg-slate-50/30" />
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <h2 className="font-heading text-2xl md:text-3xl font-black text-center mb-4 md:mb-6 text-[#220135] tracking-tighter leading-tight">
-          Why Choose <span className="text-primary underline decoration-primary/20 underline-offset-8">Danush Trade</span>
+          Why Choose <span className="text-primary underline decoration-primary/20 underline-offset-8">Danush Industrial  Trade</span>
         </h2>
         <p className="text-slate-600 text-center mb-12 md:mb-8 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed font-medium">
           Trusted by leading industrial companies for high-quality butt weld fittings and carbon steel pipe fittings
@@ -31,12 +33,12 @@ const WhyChooseUs = () => {
               style={{ animationDelay: `${i * 200}ms` }}
             >
               {/* Box Content */}
-              <div className="relative z-10 p-4 md:p-8 text-center flex-grow flex flex-col items-center justify-center">
-                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl bg-primary flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md">
+              <div className="relative z-10 p-4 md:p-8 text-center flex-grow flex flex-col items-center justify-start pt-6 md:pt-10">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl bg-primary flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md shrink-0">
                   <f.icon className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-sm md:text-xl font-bold text-slate-800 mb-2 md:mb-3 tracking-tight">{f.title}</h3>
-                <p className="text-slate-600 font-medium text-[10px] md:text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="font-heading text-sm md:text-xl font-bold text-slate-800 mb-2 md:mb-3 tracking-tight line-clamp-1">{f.title}</h3>
+                <p className="text-slate-600 font-medium text-[10px] md:text-sm leading-relaxed line-clamp-3">{f.desc}</p>
               </div>
 
               <div className="absolute bottom-0 left-0 h-1 bg-primary/10 w-full">
