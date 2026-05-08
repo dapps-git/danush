@@ -48,7 +48,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-medium text-slate-800 mb-1">Email</h3>
-                <p className="text-slate-700 font-normal text-base">info@danushtrade.com</p>
+                <p className="text-slate-700 font-normal text-base">info@danushgroup.com</p>
               </div>
             </div>
 

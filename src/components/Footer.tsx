@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-[11px] md:text-sm text-blue-100">
                 <Mail className="w-3.5 h-3.5 text-white shrink-0" />
-                <span>info@danushtrade.com</span>
+                <span>info@danushgroup.com</span>
               </div>
             </div>
           </div>
