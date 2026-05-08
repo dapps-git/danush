@@ -19,8 +19,8 @@ const contactInfo = [
     icon: Phone,
   },
   {
-    label: "info@danushtrade.com",
-    href: "mailto:info@danushtrade.com",
+    label: "info@danushgroup.com",
+    href: "mailto:info@danushgroup.com",
     icon: Mail,
   },
   {
